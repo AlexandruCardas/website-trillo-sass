@@ -1,0 +1,14 @@
+{
+  "name": "website-trillo-with-sass",
+  "version": "1.0.0",
+  "description": "Trillo website for Udemy",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "trillo"
+  ],
+  "author": "Alexandru Cardas",
+  "license": "ISC"
+}
