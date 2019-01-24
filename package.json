@@ -10,5 +10,15 @@
     "trillo"
   ],
   "author": "Alexandru Cardas",
-  "license": "ISC"
+  "license": "ISC",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AlexandruCardas/website-trillo-with-sass.git"
+  },
+  "bugs": {
+    "url": "https://github.com/AlexandruCardas/website-trillo-with-sass/issues"
+  },
+  "homepage": "https://github.com/AlexandruCardas/website-trillo-with-sass#readme",
+  "devDependencies": {},
+  "dependencies": {}
 }
