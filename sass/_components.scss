@@ -283,13 +283,26 @@
   cursor: pointer;
   -webkit-transition: all .2s;
   -moz-transition: all .2s;
-  -ms-transition: all .2s;
   -o-transition: all .2s;
   transition: all .2s;
 
+  & span {
+    margin-left: 3px;
+    -webkit-transition: margin-left .2s;
+    -moz-transition: margin-left .2s;
+    -ms-transition: margin-left .2s;
+    -o-transition: margin-left .2s;
+    transition: margin-left .2s;
+  }
+
   &:hover {
     color: var(--color-grey-dark-1);
+
+    span {
+      margin-left: 8px;
+    }
   }
+
 
   &:focus {
     outline: none;
@@ -480,5 +493,77 @@
     color: var(--color-grey-light-2);
     font-family: sans-serif;
     z-index: 1;
+  }
+}
+
+///////////////////////////
+// CALL TO ACTION
+
+.cta {
+  padding: 3.5rem 0;
+  text-align: center;
+
+  &__book-now {
+    text-transform: uppercase;
+    font-size: 2rem;
+    font-weight: 300;
+    margin-bottom: 2.5rem;
+  }
+}
+
+///////////////////////////
+// CALL TO ACTION
+
+.btn {
+  font-size: 1.5rem;
+  font-weight: 300;
+  text-transform: uppercase;
+  border-radius: 100px;
+  border: none;
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+
+  background-image: linear-gradient(to right, var(--color-primary-light), var(--color-primary-dark));
+  color: white;
+
+  & > * {
+    height: 100%;
+    width: 100%;
+    display: inline-block;
+    -webkit-transition: all .2s;
+    -moz-transition: all .2s;
+    -ms-transition: all .2s;
+    -o-transition: all .2s;
+    transition: all .2s;
+  }
+
+  &__visible {
+
+    padding: 2rem 7.5rem;
+  }
+
+  &__invisible {
+    position: absolute;
+    padding: 2rem 0;
+    left: 0;
+    top: -100%;
+  }
+
+  &:hover {
+    background-image: linear-gradient(to left, var(--color-primary-light), var(--color-primary-dark));
+  }
+
+  &:hover &__visible {
+    transform: translateY(100%);
+  }
+
+  &:hover &__invisible {
+    top: 0;
+  }
+
+  &:focus {
+    outline: none;
+    animation: pulsate 1s infinite;
   }
 }
