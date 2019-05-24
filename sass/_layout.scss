@@ -1,13 +1,19 @@
+@import "base";
+
 .container {
   max-width: 120rem;
   margin: 8rem auto;
   background-color: var(--color-grey-light-2);
-  -webkit-box-shadow: var(--shadow-dark);;
-  -moz-box-shadow: var(--shadow-dark);;
-  box-shadow: var(--shadow-dark);;
-
-
+  -webkit-box-shadow: var(--shadow-dark);
+  -moz-box-shadow: var(--shadow-dark);
+  box-shadow: var(--shadow-dark);
   min-height: 50rem;
+
+  @media only screen and (max-width: $bp-largest) {
+    margin: 0;
+    max-width: 100%;
+    width: 100%;
+  }
 }
 
 .header {
@@ -23,6 +29,10 @@
 
 .content {
   display: flex;
+
+  @media only screen and (max-width: $bp-medium) {
+    flex-direction: column;
+  }
 }
 
 .sidebar {
@@ -45,6 +55,10 @@
   display: flex;
   padding: 4.5rem;
   border-bottom: var(--line);
+
+  @media only screen and (max-width: $bp-medium) {
+    padding: 3rem;
+  }
 }
 
 .description {
@@ -56,6 +70,11 @@
   padding: 3rem;
   flex: 0 0 60%;
   margin-right: 4.5rem;
+
+  @media only screen and (max-width: $bp-medium) {
+    padding: 2rem;
+    margin-right: 3rem;
+  }
 }
 
 .user-reviews {
